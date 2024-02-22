@@ -19,10 +19,19 @@ function App() {
   const [sidebarData, setSidebarData] = useState({ tripStartDate: 0, currentWeatherInCity: {}, })
 
   useEffect(() => {
-    if (tripData?.length !== 0) {
+    console.log('start')
+    if (localStorage.localTripList) {
+      setCurrentTripsData([...JSON.parse(localStorage.localTripList)])
+    } else {
       setCurrentTripsData([...tripData])
     }
   }, [tripData])
+
+  useEffect(() => {
+    if (currentTripsData?.length) {
+      localStorage.setItem('localTripList', JSON.stringify(currentTripsData))
+    }
+  }, [currentTripsData])
 
   function handleChangeSearchText(e) {
     setHandleSearchText(e.target.value)
