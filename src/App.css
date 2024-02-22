@@ -2,6 +2,7 @@
     position:relative;
     max-width: 1170px;
     margin: 0 auto;
+    padding: 16px 8px;
 }
 
 .wrap{
@@ -18,6 +19,14 @@ margin-right: 16px;
 .main__trip-weather{
     padding: 8px;
     margin-bottom: 40px;
+}
+
+hr{
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-main);
+    border: none;
+    margin: 0;
 }
 
 @media(max-width: 1024px){

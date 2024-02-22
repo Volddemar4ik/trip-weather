@@ -1,17 +1,25 @@
-body{
+html {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
-  box-sizing: border-box;
-  color: var(--text-main);
+  box-sizing: border-box;;
 }
 
-hr{
-    width: 100%;
-    height: 1px;
-    background-color: var(--border-main);
-    border: none;
-    margin: 0;
+body{
+    color: var(--text-main);
+}
+
+h1{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h2{
+  font-size: 1.25rem;
+}
+
+h3{
+  font-size: 1rem;
 }
 
 :root{
