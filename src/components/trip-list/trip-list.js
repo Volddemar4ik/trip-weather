@@ -142,7 +142,6 @@ function TripCard(props) {
     const disabledCard = currentTripId === undefined
         ? ''
         : tripData?.id !== currentTripId ? ' trip-card_disabled' : ''
-    console.log(tripData, currentTripId, disabledCard)
 
     return (
         <div

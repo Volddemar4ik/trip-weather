@@ -5,23 +5,64 @@
     padding: 8px;
     }
 
-.header__avatar{
-    background-color: #FFF;
-    border: 1px solid var(--border-main);
+.button__login{
+    border: none;
+    text-transform: uppercase;
+    background-color: var(--background-active);
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button__login>p{
+    margin-left: 4px;
+}
+
+.button__login>.material-symbols-outlined{
+    font-size: 1.5rem;
+}
+
+.avatar{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+.avatar>img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 8px;
+    border: 1px solid var(--background-active);
+}
 
-    &:hover{
-        background-color: var(--background-active);
-        border: 1px solid var(--background-active);
-        transition: 
-            background-color 150ms,
-            border 150ms;
+.avatar__name>p{
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+@media(hover:hover){
+    .button__login:hover{
         cursor: pointer;
+        background-color: var(--blue);
+        color: #fff;
+    }
+
+    .avatar{
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 480px){
+    .button__login{
+        padding: 8px;
+        background-color: var(--blue);
+        color: #fff;
+    }
+
+    .button__login>p{
+        display: none;
     }
 }

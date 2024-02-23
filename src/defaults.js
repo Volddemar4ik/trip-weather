@@ -1,5 +1,7 @@
-export const apiKey = 'K836TY5G2WYWCPGHUEKK8ZMEZ'
 export const endpoint = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline'
+export const authEndpoint = 'https://www.googleapis.com/oauth2/v1/userinfo'
+export const apiKey = 'K836TY5G2WYWCPGHUEKK8ZMEZ'
+export const clientId = '659290199813-cl0kon9lg16k77nhg6qa14mp1a762alu.apps.googleusercontent.com'
 
 export const tripData = [
     {
