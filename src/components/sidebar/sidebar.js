@@ -57,14 +57,23 @@ export default function Sidebar({ sidebarData }) {
 
     return (
         <div className="sidebar">
-            {currentCity && timeLeft &&
-                <div className="sidebar__container">
+            {currentCity && timeLeft
+                ? <div className="sidebar__container">
                     {memoizedSidebarWeather}
 
                     <Timer
                         timeLeft={timeLeft}
                         timerParametrs={timerParametrs}
                     />
+                </div>
+                : <div className="sidebar__empty">
+                    No data
+
+                    <span class="material-symbols-outlined">
+                        cloud_off
+                    </span>
+
+                    Choose trip at first
                 </div>
             }
         </div>

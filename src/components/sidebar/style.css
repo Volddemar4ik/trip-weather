@@ -17,6 +17,21 @@
     background-color: var(--background-active);
 }
 
+.sidebar__empty{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 4px 11px rgba(0,0,0,0.08);
+}
+
+.sidebar__empty>.material-symbols-outlined{
+    font-size: 3rem;
+    margin: 8px;
+}
+
 .sidebar__header{
 margin-bottom: 16px;
 }
@@ -95,7 +110,7 @@ margin-bottom: 16px;
     text-transform: uppercase;
 }
 
-@media(max-width: 1024px){
+@media(max-width: 1120px){
     .sidebar{
         width: 100%;
     }

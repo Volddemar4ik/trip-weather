@@ -8,7 +8,9 @@ export default function Header() {
             <p>Mr. James Smith</p>
 
             <div className="header__avatar">
-                <p>J</p>
+                <span class="material-symbols-outlined">
+                    person
+                </span>
             </div>
         </div>
     )
