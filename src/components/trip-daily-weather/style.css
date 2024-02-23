@@ -1,3 +1,7 @@
+.daily-weather{
+    position: relative;
+}
+
 .daily-weather__container{
     width: 100%;
     display: flex;
@@ -8,10 +12,12 @@
 }
 
 .daily-weather__day-card{
-   min-width: 120px;
+    min-width: 120px;
+    height: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     margin: 0 8px;
     padding: 16px 8px;
     box-shadow: 0 4px 11px rgba(0,0,0,0.08);
@@ -20,12 +26,14 @@
     &:hover{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         transition: box-shadow 250ms;
-        /* cursor: pointer; */
     }
 }
 
 .daily-weather__icon-container{
     width: 50%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;    
 }
 .daily-weather__icon-container>img{
     object-fit: contain;
@@ -61,19 +69,6 @@
     font-weight: 500;
 }
 
-
 .daily-weather__container::-webkit-scrollbar {
-  height: 10px;
-  background-color: var(--background-active);
-}
-
-.daily-weather__container::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: var(--blue);
-}
-
-.daily-weather__container::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
-  border-radius: 10px;
-  background-color: var(--background-active);
+  height: 0;
 }

@@ -19,7 +19,6 @@ function App() {
   const [sidebarData, setSidebarData] = useState({ tripStartDate: 0, currentWeatherInCity: {}, })
 
   useEffect(() => {
-    console.log('start')
     if (localStorage.localTripList) {
       setCurrentTripsData([...JSON.parse(localStorage.localTripList)])
     } else {
@@ -44,6 +43,9 @@ function App() {
   async function handleChangeEveryDayTripWeatcherBlockStatus(currentTripData) {
     const { city, startDate, endDate } = currentTripData
 
+    setTripDailyWeatherList([])
+    setSidebarData({ tripStartDate: 0, currentWeatherInCity: {}, })
+
     const [dailyWeather, todayWeather] = await Promise.all([
       getTripWeather(city, startDate, endDate),
       getTripWeather(city)
@@ -63,10 +65,10 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <div className="wrap">
       <Header />
 
-      <div className="wrap">
+      <div className="container">
         <div className="main">
           <Search
             handleSearchText={handleSearchText}
@@ -80,8 +82,8 @@ function App() {
             handleChangeModalWindowStatus={handleChangeModalWindowStatus}
           />
 
-          <div className="main__trip-weather">
-            <div className="main__trip-weather-header">
+          <div className="trip-weather">
+            <div className="trip-weather__header">
               <h2>Weather for each day of the trip to {currentTrip?.city || '(Choose trip)'}</h2>
             </div>
 
