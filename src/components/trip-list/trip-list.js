@@ -138,9 +138,11 @@ export default function TripList(props) {
 function TripCard(props) {
     const { handleChangeEveryDayTripWeatcherBlockStatus, tripData, currentTripId } = props
     const tripDate = `${unixToDate(tripData?.startDate)} - ${unixToDate(tripData?.endDate)}`
+
     const disabledCard = currentTripId === undefined
         ? ''
         : tripData?.id !== currentTripId ? ' trip-card_disabled' : ''
+    console.log(tripData, currentTripId, disabledCard)
 
     return (
         <div

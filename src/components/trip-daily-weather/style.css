@@ -22,11 +22,6 @@
     padding: 16px 8px;
     box-shadow: 0 4px 11px rgba(0,0,0,0.08);
     border-radius: 4px;    
-    
-    &:hover{
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        transition: box-shadow 250ms;
-    }
 }
 
 .daily-weather__icon-container{
@@ -71,4 +66,17 @@
 
 .daily-weather__container::-webkit-scrollbar {
   height: 0;
+}
+
+@media(hover:hover){
+    .daily-weather__day-card:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: box-shadow 250ms;
+    }
+}
+
+@media(hover:none){
+    .daily-weather__day-card:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 }

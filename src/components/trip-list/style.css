@@ -32,13 +32,6 @@
     border-radius: 4px;
     cursor: pointer;
     opacity: 1;
-
-    &:hover{
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        opacity: 1;
-        transition: box-shadow 250ms,
-        opacity 250ms;
-    }
 }
 
 .trip-card_disabled{
@@ -97,4 +90,20 @@ span{
 
 .trip-list__container::-webkit-scrollbar {
   height: 0;
+}
+
+@media(hover:hover){
+    .trip-card:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        opacity: 1;
+        transition: box-shadow 250ms,
+        opacity 250ms;
+    }
+}
+
+@media(hover:none){
+    .trip-card:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        opacity: 1;
+    }
 }

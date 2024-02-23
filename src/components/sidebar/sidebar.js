@@ -69,7 +69,7 @@ export default function Sidebar({ sidebarData }) {
                 : <div className="sidebar__empty">
                     No data
 
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                         cloud_off
                     </span>
 
